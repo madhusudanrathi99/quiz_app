@@ -11,18 +11,29 @@ class HomeScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          'assets/images/quiz-logo.png',
-          width: 200,
-          height: 200,
+          'images/quiz-logo.png',
+          height: 300,
         ),
         const SizedBox(
           height: 20,
         ),
-        const Text('Learn Flutter the fun way!'),
+        const Text(
+          'Learn Flutter the fun way!',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.white,
+          ),
+        ),
         const SizedBox(
           height: 20,
         ),
-        TextButton(onPressed: startQuiz, child: const Text('Start Quiz')),
+        OutlinedButton(
+          onPressed: startQuiz,
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Colors.white,
+          ),
+          child: const Text('Start Quiz'),
+        ),
       ],
     );
   }
